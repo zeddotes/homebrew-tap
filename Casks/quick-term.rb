@@ -2,7 +2,8 @@ cask "quick-term" do
   version "1.0.0"
   sha256 "085a2179f41d1bd401d03e80a98198108ab8e244592ec64c8f6a6708a8898915"
 
-  url "https://github.com/zeddotes/quick-term/releases/download/v#{version}/QuickTerm_#{version}_macos_universal.app.zip"
+  # Artifacts are hosted on this public tap (source repo is private).
+  url "https://github.com/zeddotes/homebrew-tap/releases/download/quick-term-v#{version}/QuickTerm_#{version}_macos_universal.app.zip"
   name "QuickTerm"
   desc "Menubar quick terminal for macOS"
   homepage "https://github.com/zeddotes/quick-term"

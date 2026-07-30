@@ -35,10 +35,13 @@ Release binaries are **not** Developer ID–signed or notarized. The cask `postf
 
 Treat the download as supply-chain-sensitive: prefer the fully-qualified install above, and verify the GitHub Release tag/SHA when it matters.
 
+## Binary hosting
+
+Cask downloads come from **this** repo’s [Releases](https://github.com/zeddotes/homebrew-tap/releases) (tags like `quick-term-v1.0.0`). Upstream app repos may be private; Homebrew requires a public URL.
+
 ## Maintaining casks
 
-Ship releases from the upstream app repo (see [quick-term CONTRIBUTING](https://github.com/zeddotes/quick-term/blob/main/CONTRIBUTING.md)). Tagging `vX.Y.Z` there builds the zip, publishes a GitHub Release, and updates `Casks/quick-term.rb` (`version` + `sha256`) automatically.
+Ship releases from the upstream app repo. Its release workflow uploads the zip here and bumps `Casks/quick-term.rb` (`version` + `sha256`) automatically.
 
-Hand-edit `version` / `sha256` only if that CI step fails.
+Hand-edit the cask only if that CI step fails.
 
-Source and issues: [zeddotes/quick-term](https://github.com/zeddotes/quick-term).
